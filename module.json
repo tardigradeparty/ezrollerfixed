@@ -1,5 +1,5 @@
 {
-	"name": "ezrollerfixed",
+	"name": "ezroller",
 	"title": "E-Z Roller (Fixed)",
 	"description": "E-Z Roller updated to function with 0.95",
 	"version": "0.0.1",
@@ -17,7 +17,7 @@
 	"styles": [],
 	"packs": [],
 	"manifest": "https://raw.githubusercontent.com/tardigradeparty/ezrollerfixed/master/module.json",
-	"download": "https://raw.githubusercontent.com/tardigradeparty/ezrollerfixed/master/ezrollerfixed.zip",
+	"download": "https://raw.githubusercontent.com/tardigradeparty/ezrollerfixed/master/ezroller.zip",
 	"minimumCoreVersion": "0.5.4",
 	"compatibleCoreVersion": "0.6.6"
 }
