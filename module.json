@@ -1,7 +1,7 @@
 {
 	"name": "ezrollerfixed",
 	"title": "E-Z Roller (Fixed)",
-	"description": "Next Action Window",
+	"description": "E-Z Roller updated to function with 0.95",
 	"version": "0.0.1",
 	"author": "tardigradeparty",
 	"languages": [
@@ -16,8 +16,8 @@
 	"socket": true,
 	"styles": [],
 	"packs": [],
-	"manifest": "https://raw.githubusercontent.com/RealDeuce/ezroller/master/module.json",
-	"download": "https://raw.githubusercontent.com/RealDeuce/ezroller/master/ezroller.zip",
+	"manifest": "https://raw.githubusercontent.com/tardigradeparty/ezrollerfixed/master/module.json",
+	"download": "https://raw.githubusercontent.com/tardigradeparty/ezrollerfixed/master/ezroller.zip",
 	"minimumCoreVersion": "0.5.4",
 	"compatibleCoreVersion": "0.6.6"
 }
