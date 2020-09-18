@@ -103,7 +103,7 @@ class ItemWindow extends FormApplication {
 			const spellFormData = await AbilityUseDialog.create(item);
 			const isPact = spellFormData.get('level') === 'pact';
 			const lvl = isPact ? actor.data.data.spells.pact.level : parseInt(spellFormData.get("level"));
-			if (Boolean(spellFormData.get("consume"))) {
+			if (Boolean(spellFormData.get("consumeSlot"))) {" instead of "if (Boolean(spellFormData.get("consume"))) {
 				consume = isPact ? 'pact' : `spell${lvl}`;
 			} else {
 				consome = false;
