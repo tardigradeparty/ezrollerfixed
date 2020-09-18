@@ -10,9 +10,9 @@ Actor5e.prototype.useSpell = async function(item, {configureDialog=true}={}) {
 class ItemWindow extends FormApplication {
 	static get defaultOptions() {
 		const options = super.defaultOptions;
-		options.id = "ezroller.item-window";
+		options.id = "ezrollerfixed.item-window";
 		options.classes = [];
-		options.template = "modules/ezroller/itemwindow.html";
+		options.template = "modules/ezrollerfixed/itemwindow.html";
 		options.width = '400';
 		options.height = 'auto';
 		return options;
@@ -213,7 +213,7 @@ class ItemWindow extends FormApplication {
 		event.preventDefault();
 		let thtml = $(this.object.html);
 
-		thtml.addClass('ezroller-approved');
+		thtml.addClass('ezrollerfixed-approved');
 		thtml.find('.card-buttons').remove();
 		this.object.chatdata.content = thtml[0].outerHTML;
 		await ChatMessage.create(this.object.chatdata);
@@ -240,13 +240,13 @@ class ItemWindow extends FormApplication {
 	}
 
 	updatePins(pinned) {
-		const pins = game.settings.get('ezroller', 'pins');
+		const pins = game.settings.get('ezrollerfixed', 'pins');
 		let pin;
 
 		let idx = pins.findIndex(({itemId}) => itemId === this.object.itemId);
 		if (pinned !== undefined && idx !== -1) {
 			pins.splice(idx, 1);
-			game.settings.set('ezroller', 'pins', pins);
+			game.settings.set('ezrollerfixed', 'pins', pins);
 			return null;
 		}
 		if (pinned !== undefined && idx === -1) {
@@ -276,16 +276,16 @@ class ItemWindow extends FormApplication {
 			}
 		}
 			
-		game.settings.set('ezroller', 'pins', pins);
+		game.settings.set('ezrollerfixed', 'pins', pins);
 		return pin;
 	}
 
 	async close(...args) {
 		await super.close(...args);
-		const pins = game.settings.get('ezroller', 'pins');
+		const pins = game.settings.get('ezrollerfixed', 'pins');
 		const idx = pins.findIndex(({itemId}) => itemId === this.object.itemId);
 		pins.splice(idx, 1);
-		game.settings.set('ezroller', 'pins', pins);
+		game.settings.set('ezrollerfixed', 'pins', pins);
 	}
 
 	async _renderOuter(...args) {
@@ -333,7 +333,7 @@ class ItemWindow extends FormApplication {
 
 
 Hooks.on('ready', () => {
-	game.settings.register('ezroller', 'pins', {
+	game.settings.register('ezrollerfixed', 'pins', {
 		name: 'pins',
 		default: [],
 		scope: 'client'
@@ -342,7 +342,7 @@ Hooks.on('ready', () => {
 		if (html.type === CONST.CHAT_MESSAGE_TYPES.OTHER) {
 			let thtml = $(html.content);
 
-			if (thtml.hasClass('item-card') && thtml.hasClass('chat-card') && !thtml.hasClass('ezroller-approved')) {
+			if (thtml.hasClass('item-card') && thtml.hasClass('chat-card') && !thtml.hasClass('ezrollerfixed-approved')) {
 				let actorId = thtml.attr('data-actor-id');
 				let itemId = thtml.attr('data-item-id');
 				let title = thtml.find('h3').first().html();
@@ -358,7 +358,7 @@ Hooks.on('ready', () => {
 			}
 		}
 	});
-	const pins = game.settings.get('ezroller', 'pins');
+	const pins = game.settings.get('ezrollerfixed', 'pins');
 	pins.forEach(async (pin) => {
 		let x = pin.x;
 		let y = pin.y;
