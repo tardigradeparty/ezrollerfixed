@@ -12,7 +12,7 @@
 		}
 	],
 	"systems": ["dnd5e"],
-	"esmodules": ["./ezroller.js"],
+	"esmodules": ["ezroller.js"],
 	"socket": true,
 	"styles": [],
 	"packs": [],
