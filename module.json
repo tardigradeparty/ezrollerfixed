@@ -16,8 +16,8 @@
 	"socket": true,
 	"styles": [],
 	"packs": [],
-	"manifest": "https://raw.githubusercontent.com/tardigradeparty/ezroller/master/module.json",
-	"download": "https://raw.githubusercontent.com/tardigradeparty/ezroller/master/ezroller.zip",
+	"manifest": "https://raw.githubusercontent.com/tardigradeparty/ezrollerfixed/master/module.json",
+	"download": "https://raw.githubusercontent.com/tardigradeparty/ezrollerfixed/master/ezroller.zip",
 	"minimumCoreVersion": "0.5.4",
 	"compatibleCoreVersion": "0.6.6"
 }
