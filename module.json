@@ -17,7 +17,7 @@
 	"styles": [],
 	"packs": [],
 	"manifest": "https://raw.githubusercontent.com/tardigradeparty/ezrollerfixed/master/module.json",
-	"download": "",
+	"download": "https://raw.githubusercontent.com/tardigradeparty/ezrollerfixed/master/ezrollerfixed.zip",
 	"minimumCoreVersion": "0.5.4",
 	"compatibleCoreVersion": "0.6.6"
 }
